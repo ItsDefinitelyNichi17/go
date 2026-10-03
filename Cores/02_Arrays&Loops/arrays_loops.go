@@ -73,4 +73,39 @@ func main() {
 	ageMap3["Charlie"] = 35
 	ageMap3["Nichi"] = 10
 	fmt.Println(ageMap3)
+
+	//LOOPS =======================
+
+	fmt.Printf("\n ____LOOPS_____\n")
+
+	for i := 0; i < 3; i++ {
+		fmt.Printf("%d ", i)
+	}
+
+	// 0 to N-1
+	for i := range 3 { // same as above
+		fmt.Println(i)
+	}
+
+	n := 0
+	for n < 3 { // the while loop equivalent
+		n++
+		fmt.Println(n)
+	}
+
+	for { // the while(true) equivalent
+		fmt.Println("stopped")
+		break
+	}
+
+	fmt.Printf("\n ____LOOPS WITH ARRAYS,SLICES,MAPS_____\n")
+
+	//for array and slicesa
+	for index, value := range arr1 { // takes the index, value :=  0 to len - 1. You can omit the index by _
+		fmt.Println(index, value)
+	}
+
+	for key, value := range ageMap3 { // iterates over the map, similar init array
+		fmt.Println(key, value)
+	}
 }

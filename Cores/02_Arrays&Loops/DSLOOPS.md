@@ -38,3 +38,43 @@ var ageMap map[string]int = map[string]int{
 	ageMap3 := make(map[string]int) // best when populating dynamically
 ````
 Just like dictionay or other map data structure on other languages, it stores key-value pairs.
+
+# Loops
+ `for` is the only keyword used in go for loops.
+
+## The Classic loops
+```go
+ 	for i := 0; i < 3; i++ {
+		fmt.Printf("%d ", i)
+ 	}
+  
+ 	// 0 to N-1
+	for i := range 3 { // same as above
+		fmt.Println(i)
+	}
+
+	n := 0
+	for n < 3 { // the while loop equivalent
+		n++
+		fmt.Println(n)
+	}
+	
+	for { // the while(true) equivalent
+		fmt.Println("stopped")
+		break
+	}
+```
+
+## Iterating over slices, maps, arrays
+```go
+	//for array and slicesa
+	for index, value := range arr1 { // takes the index, value :=  0 to len - 1. You can omit the index by _
+		fmt.Println(index, value)
+	}
+
+	for key, value := range ageMap3 { // iterates over the map, similar init array
+		fmt.Println(key, value)
+	}
+
+```
+* The value of `range` is only a copy of the original value, not a reference to the original value
